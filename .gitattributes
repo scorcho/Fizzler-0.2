@@ -7,12 +7,16 @@ Fizzler.Parser/Fizzler.Parser.csproj -text
 Fizzler.Parser/NodeMatcher.cs -text
 Fizzler.Parser/Properties/AssemblyInfo.cs -text
 Fizzler.Parser/SelectorEngine.cs -text
+Fizzler.Tests/AttributeSelectors.cs -text
+Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
 Fizzler.Tests/ClassSelector.cs -text
 Fizzler.Tests/Data/SelectorTest.html -text
 Fizzler.Tests/ElementSelector.cs -text
 Fizzler.Tests/Fizzler.Tests.csproj -text
 Fizzler.Tests/IDSelector.cs -text
+Fizzler.Tests/MultipleSelectors.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
+Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
 /Fizzler.sln -text
 Libs/HtmlAgilityPack.dll -text
