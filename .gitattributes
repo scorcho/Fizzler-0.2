@@ -6,7 +6,6 @@ Fizzle.Parser/Fizzle.Parser.csproj -text
 Fizzle.Parser/NodeMatcher.cs -text
 Fizzle.Parser/Properties/AssemblyInfo.cs -text
 Fizzle.Parser/SelectorEngine.cs -text
-Fizzle.Tests/AuthoringTests.txt -text
 Fizzle.Tests/ClassSelector.cs -text
 Fizzle.Tests/Data/SelectorTest.html -text
 Fizzle.Tests/ElementSelector.cs -text
