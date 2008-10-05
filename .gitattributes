@@ -1,1 +1,19 @@
 * text=auto !eol
+Fizzle.Parser/ChunkType.cs -text
+Fizzle.Parser/Extensions/HtmlNodeCollectionExtensions.cs -text
+Fizzle.Parser/Extensions/HtmlNodeListExtensions.cs -text
+Fizzle.Parser/Fizzle.Parser.csproj -text
+Fizzle.Parser/NodeMatcher.cs -text
+Fizzle.Parser/Properties/AssemblyInfo.cs -text
+Fizzle.Parser/SelectorEngine.cs -text
+Fizzle.Tests/AuthoringTests.txt -text
+Fizzle.Tests/ClassSelector.cs -text
+Fizzle.Tests/Data/SelectorTest.html -text
+Fizzle.Tests/ElementSelector.cs -text
+Fizzle.Tests/Fizzle.Tests.csproj -text
+Fizzle.Tests/IDSelector.cs -text
+Fizzle.Tests/Properties/AssemblyInfo.cs -text
+Fizzle.Tests/SelectorBaseTest.cs -text
+/Fizzle.sln -text
+/Fizzle.vsmdi -text
+/LocalTestRun.testrunconfig -text
