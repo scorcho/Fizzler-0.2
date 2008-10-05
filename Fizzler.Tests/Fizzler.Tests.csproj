@@ -7,8 +7,8 @@
     <ProjectGuid>{61EDF5C0-1854-4867-AE8A-7A1216E116C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fizzle.Tests</RootNamespace>
-    <AssemblyName>Fizzle.Tests</AssemblyName>
+    <RootNamespace>Fizzler.Tests</RootNamespace>
+    <AssemblyName>Fizzler.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,9 +55,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fizzle.Parser\Fizzle.Parser.csproj">
+    <ProjectReference Include="..\Fizzle.Parser\Fizzler.Parser.csproj">
       <Project>{939036D6-29FD-46E4-B6CD-52618F51081B}</Project>
-      <Name>Fizzle.Parser</Name>
+      <Name>Fizzler.Parser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

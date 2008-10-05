@@ -8,8 +8,8 @@
     <ProjectGuid>{939036D6-29FD-46E4-B6CD-52618F51081B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fizzle.Parser</RootNamespace>
-    <AssemblyName>Fizzle.Parser</AssemblyName>
+    <RootNamespace>Fizzler.Parser</RootNamespace>
+    <AssemblyName>Fizzler.Parser</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
