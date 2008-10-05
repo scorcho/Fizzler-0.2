@@ -3,6 +3,7 @@
 Fizzler.Parser/ChunkType.cs -text
 Fizzler.Parser/Extensions/HtmlNodeCollectionExtensions.cs -text
 Fizzler.Parser/Extensions/HtmlNodeListExtensions.cs -text
+Fizzler.Parser/Extensions/StringListExtensions.cs -text
 Fizzler.Parser/Fizzler.Parser.csproj -text
 Fizzler.Parser/NodeMatcher.cs -text
 Fizzler.Parser/Properties/AssemblyInfo.cs -text
