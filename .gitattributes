@@ -25,6 +25,7 @@ Fizzler.Tests/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
 /Fizzler.sln -text
+/Fizzler.vsmdi -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 /LocalTestRun.testrunconfig -text
