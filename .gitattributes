@@ -10,10 +10,12 @@ Fizzler.Parser/Extensions/StringListExtensions.cs -text
 Fizzler.Parser/Fizzler.Parser.csproj -text
 Fizzler.Parser/NodeMatcher.cs -text
 Fizzler.Parser/Properties/AssemblyInfo.cs -text
+Fizzler.Parser/PseudoclassMatcher.cs -text
 Fizzler.Parser/SelectorEngine.cs -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
 Fizzler.Tests/ChunkParsing/BasicTests.cs -text
+Fizzler.Tests/ChunkParsing/PseudoclassTests.cs -text
 Fizzler.Tests/ClassSelector.cs -text
 Fizzler.Tests/Data/SelectorTest.html -text
 Fizzler.Tests/ElementSelector.cs -text
@@ -22,10 +24,13 @@ Fizzler.Tests/IDSelector.cs -text
 Fizzler.Tests/MultipleSelectors.cs -text
 Fizzler.Tests/NthChild.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
+Fizzler.Tests/PseudoclassMatching/NthChild.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
 /Fizzler.sln -text
 /Fizzler.vsmdi -text
+/Fizzler1.vsmdi -text
+/Fizzler2.vsmdi -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 /LocalTestRun.testrunconfig -text
