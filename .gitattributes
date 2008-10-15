@@ -24,7 +24,6 @@ Fizzler.Tests/IDSelector.cs -text
 Fizzler.Tests/MultipleSelectors.cs -text
 Fizzler.Tests/NthChild.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
-Fizzler.Tests/PseudoclassMatching/NthChild.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
 /Fizzler.sln -text
