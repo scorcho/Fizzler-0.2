@@ -1,5 +1,7 @@
 * text=auto !eol
 /Fizzle.vsmdi -text
+Fizzler.Parser/ChunkHandling/AttributeComparator.cs -text
+Fizzler.Parser/ChunkHandling/AttributeSelectorData.cs -text
 Fizzler.Parser/ChunkHandling/Chunk.cs -text
 Fizzler.Parser/ChunkHandling/ChunkParser.cs -text
 Fizzler.Parser/ChunkHandling/ChunkType.cs -text
