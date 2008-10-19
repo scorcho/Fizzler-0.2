@@ -34,6 +34,7 @@ Fizzler.Tests/SelectorBaseTest.cs -text
 /Fizzler.vsmdi -text
 /Fizzler1.vsmdi -text
 /Fizzler2.vsmdi -text
+/Fizzler3.vsmdi -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 /LocalTestRun.testrunconfig -text
