@@ -22,4 +22,5 @@ Fizzler.Tests/[Bb]in
 Fizzler.Tests/[Dd]ebug
 Fizzler.Tests/[Rr]elease
 Fizzler.Tests/obj
+/TestResults
 /_ReSharper.*
