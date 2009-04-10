@@ -1,6 +1,13 @@
 /*.ncb
 /*.suo
 /*.user
+Fizzler.DocumentParsers.HtmlAgilityPack/*.aps
+Fizzler.DocumentParsers.HtmlAgilityPack/*.eto
+Fizzler.DocumentParsers.HtmlAgilityPack/*.user
+Fizzler.DocumentParsers.HtmlAgilityPack/[Bb]in
+Fizzler.DocumentParsers.HtmlAgilityPack/[Dd]ebug
+Fizzler.DocumentParsers.HtmlAgilityPack/[Rr]elease
+Fizzler.DocumentParsers.HtmlAgilityPack/obj
 Fizzler.Parser/*.aps
 Fizzler.Parser/*.eto
 Fizzler.Parser/*.user
