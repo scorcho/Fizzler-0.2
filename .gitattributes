@@ -15,7 +15,6 @@ Fizzler.Parser/Document/IAttribute.cs -text
 Fizzler.Parser/Document/IAttributeCollection.cs -text
 Fizzler.Parser/Document/IDocumentNode.cs -text
 Fizzler.Parser/Extensions/IDocumentNodeExtensions.cs -text
-Fizzler.Parser/Extensions/StringListExtensions.cs -text
 Fizzler.Parser/Fizzler.Parser.csproj -text
 Fizzler.Parser/Fizzler.snk -text
 Fizzler.Parser/ISelectable.cs -text
