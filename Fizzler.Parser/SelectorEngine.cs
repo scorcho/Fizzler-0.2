@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using Fizzler.Parser.ChunkHandling;
 using Fizzler.Parser.Document;
 using Fizzler.Parser.Extensions;
@@ -13,71 +15,101 @@ namespace Fizzler.Parser
 	public class SelectorEngine : ISelectorEngine
 	{
 		private readonly ChunkParser _chunkParser = new ChunkParser();
-		private readonly IDocumentNode _scopeNode;
 		private readonly NodeMatcher _nodeMatcher = new NodeMatcher();
 
-		/// <summary>
-		/// Empty constructor
+	    /// <summary>
+		/// Create an object that can be selected using this engine given a document node.
 		/// </summary>
-		public SelectorEngine()
+		/// <param name="node"></param>
+		public ISelectable ToSelectable(IDocumentNode node)
 		{
+		    if (node == null) 
+                throw new ArgumentNullException("node");
+            if (!node.IsElement) 
+                throw new ArgumentException("Node is not is an element.", "node");
+
+		    return new SelectableDocumentNode(node, this);
 		}
 
 		/// <summary>
-		/// Allows use of the Select(string) method by initialising the engine with a document.
+		/// Select from the passed node.
 		/// </summary>
-		/// <param name="document"></param>
-		public SelectorEngine(IDocumentNode document)
-		{
-			_scopeNode = document;
-		}
-
-		/// <summary>
-		/// Select from the IDocument which was used to initialise the engine.
-		/// </summary>
+        /// <param name="node"></param>
 		/// <param name="selectorChain"></param>
 		/// <returns></returns>
-		public IList<IDocumentNode> Select(string selectorChain)
+		public IEnumerable<IDocumentNode> Select(IDocumentNode node, string selectorChain)
 		{
-			if(_scopeNode == null)
-				throw new NullReferenceException("The engine scope node was null. Either pass it in via the SelectorEngine(IDocumentNode) constructor or use Select(IDocumentNode, string).");
+		    if (node == null) 
+                throw new ArgumentNullException("node");
+		    if (!node.IsElement)
+                throw new ArgumentException("Node is not is an element.", "node");
 
-			return Select(_scopeNode, selectorChain);
+            var filters = selectorChain.Split(',')                          // tokenize
+                                       .Select(s => s.Trim())               // compress
+                                       .Where(s => s.Length > 0)            // none empty, please
+                                       .Select(s => SelectorToFilter(s));   // compile
+		    
+            return SelectImpl(Enumerable.Repeat(node, 1), filters);
 		}
 
-		/// <summary>
-		/// Select from the passed IDocument.
-		/// </summary>
-		/// <param name="scopeNode"></param>
-		/// <param name="selectorChain"></param>
-		/// <returns></returns>
-		public IList<IDocumentNode> Select(IDocumentNode scopeNode, string selectorChain)
-		{
-            if (!scopeNode.IsElement)
-                throw new ArgumentException("Node is not is an element.", "scopeNode");
+	    private static IEnumerable<IDocumentNode> SelectImpl(IEnumerable<IDocumentNode> nodes, 
+            IEnumerable<Func<IEnumerable<IDocumentNode>, IEnumerable<IDocumentNode>>> selectors)
+	    {
+            Debug.Assert(nodes != null);
+            Debug.Assert(selectors != null);
 
-			List<IDocumentNode> selectedNodes = new List<IDocumentNode>();
+            foreach (var selector in selectors)
+	        {
+	            foreach (var selection in selector(nodes))
+	                yield return selection;
+	        }
+	    }
 
-			string[] selectors = selectorChain.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+	    private Func<IEnumerable<IDocumentNode>, IEnumerable<IDocumentNode>> SelectorToFilter(string selector)
+        {
+            Debug.Assert(selector != null);
+            Debug.Assert(selector.Length > 0);
 
-			// This enables us to support "," by simply treating comma-separated parts as separate selectors
-			foreach(string rawSelector in selectors)
-			{
-				// we also need to check if a chunk contains a "." character....
-				var chunks = _chunkParser.GetChunks(rawSelector.Trim());
+            // we also need to check if a chunk contains a "." character....
+            var chunks = _chunkParser.GetChunks(selector);
+            var filters = chunks.Select((c, i) => ChunkToFilter(chunks, i));
+            return selections =>
+            {
+                foreach (var filter in filters)
+                {
+                    selections = selections.SelectMany(s => s.DescendantsAndSelf())
+                                           .Distinct()
+                                           .Where(filter);
+                }
+                return selections;
+            };
+        }
 
-                var list = new List<IDocumentNode> { scopeNode };
+	    private Func<IDocumentNode, bool> ChunkToFilter(List<Chunk> chunks, int index)
+	    {
+            Debug.Assert(chunks != null);
+            Debug.Assert(index >= 0);
+            Debug.Assert(index < chunks.Count);
+            return node => _nodeMatcher.IsDownwardMatch(node, chunks, index);
+	    }
 
-			    for(int chunkCounter = 0; chunkCounter < chunks.Count; chunkCounter++)
-				{
-					list = list.Flatten();
-					list.RemoveAll(node => !_nodeMatcher.IsDownwardMatch(node, chunks, chunkCounter));
-				}
+	    private sealed class SelectableDocumentNode : ISelectable
+        {
+            private readonly IDocumentNode _node;
+            private readonly ISelectorEngine _engine;
 
-				selectedNodes.AddRange(list);
-			}
+            public SelectableDocumentNode(IDocumentNode node, ISelectorEngine engine)
+            {
+                Debug.Assert(node != null);
+                Debug.Assert(engine != null);
+                _node = node;
+                _engine = engine;
+            }
 
-			return selectedNodes;
-		}
+            public IEnumerable<IDocumentNode> Select(string selectorChain)
+            {
+                return _engine.Select(_node, selectorChain);
+            }
+        }
 	}
 }
