@@ -7,7 +7,6 @@ Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeWrapper.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
-Fizzler.Parser/DescendantSelectionType.cs -text
 Fizzler.Parser/Document/IAttribute.cs -text
 Fizzler.Parser/Document/IAttributeCollection.cs -text
 Fizzler.Parser/Document/IDocumentNode.cs -text
