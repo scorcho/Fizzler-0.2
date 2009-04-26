@@ -1,11 +1,11 @@
 * text=auto !eol
 /Fizzle.vsmdi -text
 /Fizzler.4.5.resharper -text
-Fizzler.DocumentParsers.HtmlAgilityPack/Fizzler.DocumentParsers.HtmlAgilityPack.csproj -text
-Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeExtensions.cs -text
-Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeOps.cs -text
-Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
-Fizzler.DocumentParsers.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
+Fizzler.Systems.HtmlAgilityPack/Fizzler.DocumentParsers.HtmlAgilityPack.csproj -text
+Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
+Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
+Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
+Fizzler.Systems.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
 Fizzler.Tests/ClassSelector.cs -text
