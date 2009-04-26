@@ -4,7 +4,6 @@
 Fizzler.DocumentParsers.HtmlAgilityPack/Fizzler.DocumentParsers.HtmlAgilityPack.csproj -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeOps.cs -text
-Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeSelectorEngine.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeWrapper.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
@@ -13,7 +12,6 @@ Fizzler.Parser/ChunkHandling/AttributeSelectorData.cs -text
 Fizzler.Parser/ChunkHandling/Chunk.cs -text
 Fizzler.Parser/ChunkHandling/ChunkParser.cs -text
 Fizzler.Parser/ChunkHandling/ChunkType.cs -text
-Fizzler.Parser/CompiledSelector.cs -text
 Fizzler.Parser/DescendantSelectionType.cs -text
 Fizzler.Parser/Document/IAttribute.cs -text
 Fizzler.Parser/Document/IAttributeCollection.cs -text
