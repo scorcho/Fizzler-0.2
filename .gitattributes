@@ -2,7 +2,6 @@
 /Fizzle.vsmdi -text
 /Fizzler.4.5.resharper -text
 Fizzler.DocumentParsers.HtmlAgilityPack/Fizzler.DocumentParsers.HtmlAgilityPack.csproj -text
-Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeCollectionExtensions.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.DocumentParsers.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
