@@ -21,7 +21,6 @@ Fizzler.Parser/Fizzler.Parser.csproj -text
 Fizzler.Parser/Fizzler.snk -text
 Fizzler.Parser/INodeOps.cs -text
 Fizzler.Parser/ISelectable.cs -text
-Fizzler.Parser/ISelectorEngine.cs -text
 Fizzler.Parser/ISelectorGenerator.cs -text
 Fizzler.Parser/Matchers/AttributeMatcher.cs -text
 Fizzler.Parser/Matchers/NodeMatcher.cs -text
@@ -30,7 +29,6 @@ Fizzler.Parser/Parser.cs -text
 Fizzler.Parser/Properties/AssemblyInfo.cs -text
 Fizzler.Parser/Reader.cs -text
 Fizzler.Parser/Selector.cs -text
-Fizzler.Parser/SelectorEngine.cs -text
 Fizzler.Parser/SelectorGenerator.cs -text
 Fizzler.Parser/Token.cs -text
 Fizzler.Parser/TokenKind.cs -text
