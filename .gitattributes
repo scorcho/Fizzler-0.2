@@ -42,6 +42,7 @@ Fizzler.Tests/NthChild.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
+Fizzler.Tests/TokenTests.cs -text
 Fizzler.Tests/TokenerTests.cs -text
 /Fizzler.sln -text
 /Fizzler.vsmdi -text
