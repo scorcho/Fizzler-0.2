@@ -23,4 +23,6 @@ Fizzler/[Dd]ebug
 Fizzler/[Rr]elease
 Fizzler/obj
 /TestResults
+VisualFizzler/bin
+VisualFizzler/obj
 /_ReSharper.*

@@ -44,3 +44,16 @@ Fizzler/Tokener.cs -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 /LocalTestRun.testrunconfig -text
+VisualFizzler/CursorScope.cs -text
+VisualFizzler/ISingletonScopeHelper.cs -text
+VisualFizzler/MainForm.Designer.cs -text
+VisualFizzler/MainForm.cs -text
+VisualFizzler/MainForm.resx -text
+VisualFizzler/Program.cs -text
+VisualFizzler/Properties/AssemblyInfo.cs -text
+VisualFizzler/Properties/Resources.Designer.cs -text
+VisualFizzler/Properties/Resources.resx -text
+VisualFizzler/Properties/Settings.Designer.cs -text
+VisualFizzler/Properties/Settings.settings -text
+VisualFizzler/SingletonScope.cs -text
+VisualFizzler/VisualFizzler.csproj -text
