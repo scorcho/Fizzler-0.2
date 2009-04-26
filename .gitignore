@@ -8,13 +8,6 @@ Fizzler.DocumentParsers.HtmlAgilityPack/[Bb]in
 Fizzler.DocumentParsers.HtmlAgilityPack/[Dd]ebug
 Fizzler.DocumentParsers.HtmlAgilityPack/[Rr]elease
 Fizzler.DocumentParsers.HtmlAgilityPack/obj
-Fizzler.Parser/*.aps
-Fizzler.Parser/*.eto
-Fizzler.Parser/*.user
-Fizzler.Parser/[Bb]in
-Fizzler.Parser/[Dd]ebug
-Fizzler.Parser/[Rr]elease
-Fizzler.Parser/obj
 Fizzler.Tests/*.aps
 Fizzler.Tests/*.eto
 Fizzler.Tests/*.user
@@ -22,5 +15,12 @@ Fizzler.Tests/[Bb]in
 Fizzler.Tests/[Dd]ebug
 Fizzler.Tests/[Rr]elease
 Fizzler.Tests/obj
+Fizzler/*.aps
+Fizzler/*.eto
+Fizzler/*.user
+Fizzler/[Bb]in
+Fizzler/[Dd]ebug
+Fizzler/[Rr]elease
+Fizzler/obj
 /TestResults
 /_ReSharper.*

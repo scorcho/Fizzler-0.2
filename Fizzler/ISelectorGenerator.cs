@@ -1,4 +1,4 @@
-namespace Fizzler.Parser
+namespace Fizzler
 {
     /// <summary>
     /// Represent an implementation that is responsible for generating
