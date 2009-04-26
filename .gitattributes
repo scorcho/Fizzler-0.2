@@ -19,7 +19,6 @@ Fizzler.Parser/Extensions/IDocumentNodeExtensions.cs -text
 Fizzler.Parser/Fizzler.Parser.csproj -text
 Fizzler.Parser/Fizzler.snk -text
 Fizzler.Parser/INodeOps.cs -text
-Fizzler.Parser/ISelectable.cs -text
 Fizzler.Parser/ISelectorGenerator.cs -text
 Fizzler.Parser/Matchers/AttributeMatcher.cs -text
 Fizzler.Parser/Matchers/NodeMatcher.cs -text
