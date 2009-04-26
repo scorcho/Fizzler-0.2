@@ -10,7 +10,6 @@ Fizzler.DocumentParsers.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
 Fizzler.Parser/ChunkHandling/AttributeComparator.cs -text
 Fizzler.Parser/ChunkHandling/AttributeSelectorData.cs -text
 Fizzler.Parser/ChunkHandling/Chunk.cs -text
-Fizzler.Parser/ChunkHandling/ChunkParser.cs -text
 Fizzler.Parser/ChunkHandling/ChunkType.cs -text
 Fizzler.Parser/DescendantSelectionType.cs -text
 Fizzler.Parser/Document/IAttribute.cs -text
@@ -35,9 +34,6 @@ Fizzler.Parser/TokenKind.cs -text
 Fizzler.Parser/Tokener.cs -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
-Fizzler.Tests/ChunkParsing/AttributeTests.cs -text
-Fizzler.Tests/ChunkParsing/BasicTests.cs -text
-Fizzler.Tests/ChunkParsing/PseudoclassTests.cs -text
 Fizzler.Tests/ClassSelector.cs -text
 Fizzler.Tests/Data/SelectorTest.html -text
 Fizzler.Tests/ElementSelector.cs -text
