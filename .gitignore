@@ -8,6 +8,8 @@ Fizzler.Systems.HtmlAgilityPack/[Bb]in
 Fizzler.Systems.HtmlAgilityPack/[Dd]ebug
 Fizzler.Systems.HtmlAgilityPack/[Rr]elease
 Fizzler.Systems.HtmlAgilityPack/obj
+Fizzler.Systems.WinForms/bin
+Fizzler.Systems.WinForms/obj
 Fizzler.Tests/*.aps
 Fizzler.Tests/*.eto
 Fizzler.Tests/*.user

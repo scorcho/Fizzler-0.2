@@ -6,6 +6,10 @@ Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
 Fizzler.Systems.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
+Fizzler.Systems.WinForms/ControlExtensions.cs -text
+Fizzler.Systems.WinForms/ControlOps.cs -text
+Fizzler.Systems.WinForms/Fizzler.Systems.WinForms.csproj -text
+Fizzler.Systems.WinForms/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
 Fizzler.Tests/ClassSelector.cs -text
