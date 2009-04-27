@@ -47,6 +47,7 @@ Fizzler/Tokener.cs -text
 /Fizzler7.vsmdi -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
+Libs/nunit.framework.dll -text
 /LocalTestRun.testrunconfig -text
 VisualFizzler/CursorScope.cs -text
 VisualFizzler/ISingletonScopeHelper.cs -text
