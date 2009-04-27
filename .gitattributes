@@ -1,5 +1,4 @@
 * text=auto !eol
-/Fizzle.vsmdi -text
 /Fizzler.4.5.resharper -text
 Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
@@ -26,7 +25,6 @@ Fizzler.Tests/SelectorBaseTest.cs -text
 Fizzler.Tests/TokenTests.cs -text
 Fizzler.Tests/TokenerTests.cs -text
 /Fizzler.sln -text
-/Fizzler.vsmdi -text
 Fizzler/Fizzler.csproj -text
 Fizzler/Fizzler.snk -text
 Fizzler/INodeOps.cs -text
@@ -39,17 +37,9 @@ Fizzler/SelectorGenerator.cs -text
 Fizzler/Token.cs -text
 Fizzler/TokenKind.cs -text
 Fizzler/Tokener.cs -text
-/Fizzler1.vsmdi -text
-/Fizzler2.vsmdi -text
-/Fizzler3.vsmdi -text
-/Fizzler4.vsmdi -text
-/Fizzler5.vsmdi -text
-/Fizzler6.vsmdi -text
-/Fizzler7.vsmdi -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 Libs/nunit.framework.dll -text
-/LocalTestRun.testrunconfig -text
 VisualFizzler/CursorScope.cs -text
 VisualFizzler/ISingletonScopeHelper.cs -text
 VisualFizzler/MainForm.Designer.cs -text
