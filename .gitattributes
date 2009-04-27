@@ -10,6 +10,7 @@ Fizzler.Systems.WinForms/ControlExtensions.cs -text
 Fizzler.Systems.WinForms/ControlOps.cs -text
 Fizzler.Systems.WinForms/Fizzler.Systems.WinForms.csproj -text
 Fizzler.Systems.WinForms/Properties/AssemblyInfo.cs -text
+Fizzler.Tests/App.config -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
 Fizzler.Tests/ClassSelector.cs -text
@@ -62,3 +63,4 @@ VisualFizzler/Properties/Settings.Designer.cs -text
 VisualFizzler/Properties/Settings.settings -text
 VisualFizzler/SingletonScope.cs -text
 VisualFizzler/VisualFizzler.csproj -text
+/default.build -text
