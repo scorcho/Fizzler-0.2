@@ -5,15 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{939036D6-29FD-46E4-B6CD-52618F51081B}</ProjectGuid>
+    <ProjectGuid>{DBEAD205-BD5C-461F-873D-DE643016F14C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fizzler.Parser</RootNamespace>
-    <AssemblyName>Fizzler.Parser</AssemblyName>
+    <RootNamespace>Fizzler.DocumentParsers.HtmlAgilityPack</RootNamespace>
+    <AssemblyName>Fizzler.DocumentParsers.HtmlAgilityPack</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Fizzler.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,8 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Fizzler.Parser.XML</DocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,36 +29,29 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Fizzler.Parser.XML</DocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.3.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\IDocumentNodeExtensions.cs" />
-    <Compile Include="ISelectable.cs" />
-    <Compile Include="Matchers\AttributeMatcher.cs" />
-    <Compile Include="ChunkHandling\AttributeComparator.cs" />
-    <Compile Include="ChunkHandling\AttributeSelectorData.cs" />
-    <Compile Include="ChunkHandling\Chunk.cs" />
-    <Compile Include="ChunkHandling\ChunkParser.cs" />
-    <Compile Include="ChunkHandling\ChunkType.cs" />
-    <Compile Include="DescendantSelectionType.cs" />
-    <Compile Include="Document\IAttribute.cs" />
-    <Compile Include="Document\IAttributeCollection.cs" />
-    <Compile Include="Document\IDocumentNode.cs" />
-    <Compile Include="ISelectorEngine.cs" />
-    <Compile Include="Matchers\NodeMatcher.cs" />
-    <Compile Include="Matchers\PseudoclassMatcher.cs" />
-    <Compile Include="SelectorEngine.cs" />
+    <Compile Include="HtmlNodeExtensions.cs" />
+    <Compile Include="HtmlNodeOps.cs" />
+    <Compile Include="HtmlNodeSelectorGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Fizzler.snk" />
+    <ProjectReference Include="..\Fizzler.Parser\Fizzler.Parser.csproj">
+      <Project>{939036D6-29FD-46E4-B6CD-52618F51081B}</Project>
+      <Name>Fizzler.Parser</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
