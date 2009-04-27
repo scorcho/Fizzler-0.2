@@ -1,7 +1,7 @@
 * text=auto !eol
 /Fizzle.vsmdi -text
 /Fizzler.4.5.resharper -text
-Fizzler.Systems.HtmlAgilityPack/Fizzler.DocumentParsers.HtmlAgilityPack.csproj -text
+Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
