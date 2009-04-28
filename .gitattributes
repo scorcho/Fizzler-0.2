@@ -17,6 +17,7 @@ Fizzler.Tests/ClassSelector.cs -text
 Fizzler.Tests/Data/SelectorTest.html -text
 Fizzler.Tests/ElementSelector.cs -text
 Fizzler.Tests/Fizzler.Tests.csproj -text
+Fizzler.Tests/HumanReadableSelectorGeneratorTests.cs -text
 Fizzler.Tests/IDSelector.cs -text
 Fizzler.Tests/MultipleSelectors.cs -text
 Fizzler.Tests/NthChild.cs -text
@@ -28,6 +29,7 @@ Fizzler.Tests/TokenerTests.cs -text
 /Fizzler.sln -text
 Fizzler/Fizzler.csproj -text
 Fizzler/Fizzler.snk -text
+Fizzler/HumanReadableSelectorGenerator.cs -text
 Fizzler/INodeOps.cs -text
 Fizzler/ISelectorGenerator.cs -text
 Fizzler/Parser.cs -text
