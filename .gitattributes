@@ -1,5 +1,8 @@
 * text=auto !eol
 /Fizzler.4.5.resharper -text
+Fizzler.Net20/Fizzler.csproj -text
+Fizzler.Systems.HtmlAgilityPack.Net20/ExtensionAttribute.cs -text
+Fizzler.Systems.HtmlAgilityPack.Net20/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
@@ -10,6 +13,7 @@ Fizzler.Systems.WinForms/ControlOps.cs -text
 Fizzler.Systems.WinForms/ControlSelection.cs -text
 Fizzler.Systems.WinForms/Fizzler.Systems.WinForms.csproj -text
 Fizzler.Systems.WinForms/Properties/AssemblyInfo.cs -text
+Fizzler.Tests.Net20/Fizzler.Tests.csproj -text
 Fizzler.Tests/App.config -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
@@ -38,6 +42,7 @@ Fizzler/SelectorGenerator.cs -text
 Fizzler/Token.cs -text
 Fizzler/TokenKind.cs -text
 Fizzler/Tokener.cs -text
+Libs/BackLinq.dll -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 Libs/nunit.framework.dll -text
