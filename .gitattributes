@@ -3,7 +3,6 @@
 Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
-Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelectorGenerator.cs -text
 Fizzler.Systems.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
 Fizzler.Systems.WinForms/ControlExtensions.cs -text
 Fizzler.Systems.WinForms/ControlOps.cs -text
