@@ -37,6 +37,7 @@ Fizzler/Properties/AssemblyInfo.cs -text
 Fizzler/Reader.cs -text
 Fizzler/Selector.cs -text
 Fizzler/SelectorGenerator.cs -text
+Fizzler/SelectorGeneratorTee.cs -text
 Fizzler/Token.cs -text
 Fizzler/TokenKind.cs -text
 Fizzler/Tokener.cs -text
