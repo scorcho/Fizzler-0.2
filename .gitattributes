@@ -1,4 +1,7 @@
 * text=auto !eol
+ConsoleFizzler/ConsoleFizzler.csproj -text
+ConsoleFizzler/Program.cs -text
+ConsoleFizzler/Properties/AssemblyInfo.cs -text
 /Fizzler.4.5.resharper -text
 Fizzler.Sandbox/Fizzler.Sandbox.csproj -text
 Fizzler.Sandbox/Properties/AssemblyInfo.cs -text

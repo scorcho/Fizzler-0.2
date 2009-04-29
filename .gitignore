@@ -1,6 +1,13 @@
 /*.ncb
 /*.suo
 /*.user
+ConsoleFizzler/*.aps
+ConsoleFizzler/*.eto
+ConsoleFizzler/*.user
+ConsoleFizzler/[Bb]in
+ConsoleFizzler/[Dd]ebug
+ConsoleFizzler/[Rr]elease
+ConsoleFizzler/obj
 Fizzler.Sandbox/bin
 Fizzler.Sandbox/obj
 Fizzler.Systems.HtmlAgilityPack/*.aps
