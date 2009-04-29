@@ -49,6 +49,7 @@ NET-2.0/ExtensionAttribute.cs -text
 NET-2.0/Fizzler.Systems.HtmlAgilityPack.csproj -text
 NET-2.0/Fizzler.Tests.csproj -text
 NET-2.0/Fizzler.csproj -text
+VisualFizzler/ContentTypeExtensions.cs -text
 VisualFizzler/CursorScope.cs -text
 VisualFizzler/ISingletonScopeHelper.cs -text
 VisualFizzler/MainForm.Designer.cs -text
