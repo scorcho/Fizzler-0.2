@@ -1,10 +1,10 @@
 * text=auto !eol
 /Fizzler.4.5.resharper -text
-Fizzler.Sandbox/ControlExtensions.cs -text
-Fizzler.Sandbox/ControlOps.cs -text
-Fizzler.Sandbox/ControlSelection.cs -text
 Fizzler.Sandbox/Fizzler.Sandbox.csproj -text
 Fizzler.Sandbox/Properties/AssemblyInfo.cs -text
+Fizzler.Sandbox/WinForms/ControlExtensions.cs -text
+Fizzler.Sandbox/WinForms/ControlOps.cs -text
+Fizzler.Sandbox/WinForms/ControlSelection.cs -text
 Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
