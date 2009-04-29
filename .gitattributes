@@ -1,15 +1,15 @@
 * text=auto !eol
 /Fizzler.4.5.resharper -text
+Fizzler.Sandbox/ControlExtensions.cs -text
+Fizzler.Sandbox/ControlOps.cs -text
+Fizzler.Sandbox/ControlSelection.cs -text
+Fizzler.Sandbox/Fizzler.Sandbox.csproj -text
+Fizzler.Sandbox/Properties/AssemblyInfo.cs -text
 Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelection.cs -text
 Fizzler.Systems.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
-Fizzler.Systems.WinForms/ControlExtensions.cs -text
-Fizzler.Systems.WinForms/ControlOps.cs -text
-Fizzler.Systems.WinForms/ControlSelection.cs -text
-Fizzler.Systems.WinForms/Fizzler.Systems.WinForms.csproj -text
-Fizzler.Systems.WinForms/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/App.config -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
