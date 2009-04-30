@@ -1,7 +1,16 @@
 * text=auto !eol
+ConsoleFizzler/App.config -text
+ConsoleFizzler/Command.cs -text
+ConsoleFizzler/CommandLine.cs -text
 ConsoleFizzler/ConsoleFizzler.csproj -text
+ConsoleFizzler/ExplainCommand.cs -text
+ConsoleFizzler/ICommand.cs -text
+ConsoleFizzler/NameValueCollectionExtensions.cs -text
+ConsoleFizzler/NodeOutputFormat.cs -text
 ConsoleFizzler/Program.cs -text
 ConsoleFizzler/Properties/AssemblyInfo.cs -text
+ConsoleFizzler/SelectCommand.cs -text
+ConsoleFizzler/StringExtensions.cs -text
 /Fizzler.4.5.resharper -text
 Fizzler.Sandbox/Fizzler.Sandbox.csproj -text
 Fizzler.Sandbox/Properties/AssemblyInfo.cs -text
