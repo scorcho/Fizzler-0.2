@@ -43,7 +43,7 @@ Fizzler.Tests/TokenerTests.cs -text
 Fizzler/Fizzler.csproj -text
 Fizzler/Fizzler.snk -text
 Fizzler/HumanReadableSelectorGenerator.cs -text
-Fizzler/INodeOps.cs -text
+Fizzler/IElementOps.cs -text
 Fizzler/ISelectorGenerator.cs -text
 Fizzler/Parser.cs -text
 Fizzler/Properties/AssemblyInfo.cs -text
