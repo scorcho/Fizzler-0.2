@@ -33,6 +33,7 @@ Fizzler/[Bb]in
 Fizzler/[Dd]ebug
 Fizzler/[Rr]elease
 Fizzler/obj
+NET-2.0/*.user
 NET-2.0/bin
 NET-2.0/obj
 /TestResults

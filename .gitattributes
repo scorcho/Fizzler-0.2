@@ -27,7 +27,6 @@ Fizzler.Tests/App.config -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
 Fizzler.Tests/ClassSelector.cs -text
-Fizzler.Tests/Data/SelectorTest.html -text
 Fizzler.Tests/ElementSelector.cs -text
 Fizzler.Tests/Fizzler.Tests.csproj -text
 Fizzler.Tests/HumanReadableSelectorGeneratorTests.cs -text
@@ -37,6 +36,7 @@ Fizzler.Tests/NthChild.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
+Fizzler.Tests/SelectorTest.html -text
 Fizzler.Tests/TokenTests.cs -text
 Fizzler.Tests/TokenerTests.cs -text
 /Fizzler.sln -text
