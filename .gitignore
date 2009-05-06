@@ -10,6 +10,7 @@ ConsoleFizzler/[Bb]in
 ConsoleFizzler/[Dd]ebug
 ConsoleFizzler/[Rr]elease
 ConsoleFizzler/obj
+Fizzler.Sandbox/*.user
 Fizzler.Sandbox/bin
 Fizzler.Sandbox/obj
 Fizzler.Systems.HtmlAgilityPack/*.aps
