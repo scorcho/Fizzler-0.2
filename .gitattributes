@@ -78,4 +78,6 @@ VisualFizzler/Properties/Settings.Designer.cs -text
 VisualFizzler/Properties/Settings.settings -text
 VisualFizzler/SingletonScope.cs -text
 VisualFizzler/VisualFizzler.csproj -text
+/build.cmd -text
+/buildw.cmd -text
 /default.build -text
