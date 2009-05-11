@@ -20,6 +20,13 @@ Fizzler.Systems.HtmlAgilityPack/[Bb]in
 Fizzler.Systems.HtmlAgilityPack/[Dd]ebug
 Fizzler.Systems.HtmlAgilityPack/[Rr]elease
 Fizzler.Systems.HtmlAgilityPack/obj
+Fizzler.Systems.XmlNodeQuery/*.aps
+Fizzler.Systems.XmlNodeQuery/*.eto
+Fizzler.Systems.XmlNodeQuery/*.user
+Fizzler.Systems.XmlNodeQuery/[Bb]in
+Fizzler.Systems.XmlNodeQuery/[Dd]ebug
+Fizzler.Systems.XmlNodeQuery/[Rr]elease
+Fizzler.Systems.XmlNodeQuery/obj
 Fizzler.Tests/*.aps
 Fizzler.Tests/*.eto
 Fizzler.Tests/*.user
@@ -34,7 +41,12 @@ Fizzler/[Bb]in
 Fizzler/[Dd]ebug
 Fizzler/[Rr]elease
 Fizzler/obj
+NET-2.0/*.aps
+NET-2.0/*.eto
 NET-2.0/*.user
+NET-2.0/[Bb]in
+NET-2.0/[Dd]ebug
+NET-2.0/[Rr]elease
 NET-2.0/bin
 NET-2.0/obj
 /TestResults

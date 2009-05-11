@@ -25,6 +25,11 @@ Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelection.cs -text
 Fizzler.Systems.HtmlAgilityPack/Properties/AssemblyInfo.cs -text
+Fizzler.Systems.XmlNodeQuery/Fizzler.Systems.XmlNodeQuery.csproj -text
+Fizzler.Systems.XmlNodeQuery/Properties/AssemblyInfo.cs -text
+Fizzler.Systems.XmlNodeQuery/XmlNodeExtensions.cs -text
+Fizzler.Systems.XmlNodeQuery/XmlNodeOps.cs -text
+Fizzler.Systems.XmlNodeQuery/XmlNodeSelection.cs -text
 Fizzler.Tests/App.config -text
 Fizzler.Tests/AttributeSelectors.cs -text
 Fizzler.Tests/ChildAndAdjacentSelectors.cs -text
@@ -59,9 +64,11 @@ Fizzler/Tokener.cs -text
 Libs/BackLinq.dll -text
 Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
+Libs/SgmlReaderDll.dll -text
 Libs/nunit.framework.dll -text
 NET-2.0/ExtensionAttribute.cs -text
 NET-2.0/Fizzler.Systems.HtmlAgilityPack.csproj -text
+NET-2.0/Fizzler.Systems.XmlNodeQuery.csproj -text
 NET-2.0/Fizzler.Tests.csproj -text
 NET-2.0/Fizzler.csproj -text
 VisualFizzler/ContentTypeExtensions.cs -text
