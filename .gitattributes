@@ -48,6 +48,7 @@ Fizzler.Tests/SelectorGeneratorTeeTestsBase.cs -text
 Fizzler.Tests/SelectorTest.html -text
 Fizzler.Tests/TokenTests.cs -text
 Fizzler.Tests/TokenerTests.cs -text
+Fizzler.Tests/XmlNodeQueryTests.cs -text
 /Fizzler.sln -text
 Fizzler/Fizzler.csproj -text
 Fizzler/Fizzler.snk -text
