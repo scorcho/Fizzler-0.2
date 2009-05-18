@@ -44,7 +44,6 @@ Fizzler.Tests/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
 Fizzler.Tests/SelectorGeneratorTeeTests.cs -text
-Fizzler.Tests/SelectorGeneratorTeeTestsBase.cs -text
 Fizzler.Tests/SelectorTest.html -text
 Fizzler.Tests/TokenTests.cs -text
 Fizzler.Tests/TokenerTests.cs -text
