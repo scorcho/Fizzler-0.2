@@ -39,10 +39,10 @@ Fizzler.Tests/Fizzler.Tests.csproj -text
 Fizzler.Tests/HumanReadableSelectorGeneratorTests.cs -text
 Fizzler.Tests/IDSelector.cs -text
 Fizzler.Tests/MultipleSelectors.cs -text
+Fizzler.Tests/NamespacePrefixTests.cs -text
 Fizzler.Tests/NthChild.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
-Fizzler.Tests/QNameTests.cs -text
 Fizzler.Tests/ReaderTests.cs -text
 Fizzler.Tests/SelectorBaseTest.cs -text
 Fizzler.Tests/SelectorGeneratorTeeTests.cs -text
@@ -56,9 +56,9 @@ Fizzler/Fizzler.snk -text
 Fizzler/HumanReadableSelectorGenerator.cs -text
 Fizzler/IElementOps.cs -text
 Fizzler/ISelectorGenerator.cs -text
+Fizzler/NamespacePrefix.cs -text
 Fizzler/Parser.cs -text
 Fizzler/Properties/AssemblyInfo.cs -text
-Fizzler/QName.cs -text
 Fizzler/Reader.cs -text
 Fizzler/Selector.cs -text
 Fizzler/SelectorGenerator.cs -text
