@@ -6,11 +6,6 @@ using NUnit.Framework;
 
 namespace Fizzler.Tests
 {
-	public delegate void FzAction();
-	public delegate void FzActionS2(string s, string s2);
-	public delegate void FzActionS1(string s);
-	public delegate void FzActionI2(int i, int i2);
-
 	/// <summary>
 	/// Ensure that all actions on SelectorGeneratorTee are passed
 	/// to the internal Primary and Secondary SelectorGenerators.
@@ -67,13 +62,13 @@ namespace Fizzler.Tests
 		[Test]
 		public void TypeTest()
 		{
-			Run(tee.Type, "go");
+            Run(tee.Type, NamespacePrefix.None, "go");
 		}
 
 		[Test]
 		public void UniversalTest()
 		{
-			Run(tee.Universal);
+			Run(tee.Universal, NamespacePrefix.None);
 		}
 
 		[Test]
@@ -91,43 +86,43 @@ namespace Fizzler.Tests
 		[Test]
 		public void AttrExistsTest()
 		{
-			Run(tee.AttributeExists, "hello");
+			Run(tee.AttributeExists, NamespacePrefix.None, "hello");
 		}
 
 		[Test]
 		public void AttExactTest()
 		{
-			Run(tee.AttributeExact, "hello", "there");
+			Run(tee.AttributeExact, NamespacePrefix.None, "hello", "there");
 		}
 
 		[Test]
 		public void AttrIncludesTest()
 		{
-			Run(tee.AttributeIncludes, "hello", "there");
+			Run(tee.AttributeIncludes, NamespacePrefix.None, "hello", "there");
 		}
 
 		[Test]
 		public void AttrDashMatchTest()
 		{
-			Run(tee.AttributeDashMatch, "hello", "there");
+			Run(tee.AttributeDashMatch, NamespacePrefix.None, "hello", "there");
 		}
 
 		[Test]
 		public void AttrPrefixMatchTest()
 		{
-			Run(tee.AttributePrefixMatch,"hello", "there");
+			Run(tee.AttributePrefixMatch,NamespacePrefix.None, "hello", "there");
 		}
 
 		[Test]
 		public void AttrSuffixMatchTest()
 		{
-			Run(tee.AttributeSuffixMatch, "hello", "there");
+			Run(tee.AttributeSuffixMatch, NamespacePrefix.None, "hello", "there");
 		}
 
 		[Test]
 		public void AttrSubstringTest()
 		{
-			Run(tee.AttributeSubstring, "hello", "there");
+			Run(tee.AttributeSubstring, NamespacePrefix.None, "hello", "there");
 		}
 
 		[Test]
@@ -145,7 +140,7 @@ namespace Fizzler.Tests
 		[Test]
 		public void NthChildTest()
 		{
-			RunI(tee.NthChild, 1, 2);
+			Run(tee.NthChild, 1, 2);
 		}
 
 		[Test]
@@ -184,34 +179,31 @@ namespace Fizzler.Tests
 			Run(tee.GeneralSibling);
 		}
 
-		private static void Run(FzAction action, params object[] args)
+		private static void Run(Action action)
 		{
-			Run(action.Method, args);
+			RunImpl(action.Method);
 		}
 
-		private static void Run(FzActionS1 action, params object[] args)
+        private static void Run<T>(Action<T> action, T arg)
 		{
-			Run(action.Method, args);
+			RunImpl(action.Method, arg);
 		}
 
-		private static void Run(FzActionS2 action, params object[] args)
+		private static void Run<T1, T2>(Action<T1, T2> action, T1 arg1, T2 arg2)
 		{
-			Run(action.Method, args);
+			RunImpl(action.Method, arg1, arg2);
 		}
 
-		/// <summary>
-		/// This is named differently as Mono cannot work out the difference between this and Run(FzActionS2 action, params object[] args)
-		/// </summary>
-		private static void RunI(FzActionI2 action, params object[] args)
-		{
-			Run(action.Method, args);
-		}
+        private static void Run<T1, T2, T3>(Action<T1, T2, T3> action, T1 arg1, T2 arg2, T3 arg3)
+        {
+            RunImpl(action.Method, arg1, arg2, arg3);
+        }
 
 		/// <summary>
 	    /// Take the passed action, run it, and then check that the last method
 	    /// and last args are the same for pri and sec.
 	    /// </summary>
-	    private static void Run(MethodBase action, params object[] args)
+	    private static void RunImpl(MethodBase action, params object[] args)
 	    {
             var recordings = new Queue<CallRecording<ISelectorGenerator>>(2);
 	        primary.Recorder = recordings.Enqueue;
@@ -274,14 +266,14 @@ namespace Fizzler.Tests
 	            OnInvoked(MethodBase.GetCurrentMethod());
 	        }
 
-	        public void Type(string type)
+	        public void Type(NamespacePrefix prefix, string type)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), type);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, type);
 	        }
 
-	        public void Universal()
+	        public void Universal(NamespacePrefix prefix)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod());
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix);
 	        }
 
 	        public void Id(string id)
@@ -294,39 +286,39 @@ namespace Fizzler.Tests
 	            OnInvoked(MethodBase.GetCurrentMethod(), clazz);
 	        }
 
-	        public void AttributeExists(string name)
+	        public void AttributeExists(NamespacePrefix prefix, string name)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name);
 	        }
 
-	        public void AttributeExact(string name, string value)
+	        public void AttributeExact(NamespacePrefix prefix, string name, string value)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name, value);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name, value);
 	        }
 
-	        public void AttributeIncludes(string name, string value)
+	        public void AttributeIncludes(NamespacePrefix prefix, string name, string value)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name, value);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name, value);
 	        }
 
-	        public void AttributeDashMatch(string name, string value)
+	        public void AttributeDashMatch(NamespacePrefix prefix, string name, string value)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name, value);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name, value);
 	        }
 
-	        public void AttributePrefixMatch(string name, string value)
+	        public void AttributePrefixMatch(NamespacePrefix prefix, string name, string value)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name, value);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name, value);
 	        }
 
-	        public void AttributeSuffixMatch(string name, string value)
+	        public void AttributeSuffixMatch(NamespacePrefix prefix, string name, string value)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name, value);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name, value);
 	        }
 
-	        public void AttributeSubstring(string name, string value)
+	        public void AttributeSubstring(NamespacePrefix prefix, string name, string value)
 	        {
-	            OnInvoked(MethodBase.GetCurrentMethod(), name, value);
+	            OnInvoked(MethodBase.GetCurrentMethod(), prefix, name, value);
 	        }
 
 	        public void FirstChild()

@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using Fizzler;
 using HtmlAgilityPack;
 
 namespace Fizzler.Systems.HtmlAgilityPack
@@ -15,9 +14,11 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// Generates a <a href="http://www.w3.org/TR/css3-selectors/#type-selectors">type selector</a>,
         /// which represents an instance of the element type in the document tree. 
         /// </summary>
-        public virtual Selector<HtmlNode> Type(string type)
+        public virtual Selector<HtmlNode> Type(NamespacePrefix prefix, string type)
         {
-            return nodes => nodes.Elements().Where(n => n.Name == type);
+            return prefix.IsSpecific
+                 ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
+                 : (nodes => nodes.Elements().Where(n => n.Name == type));
         }
 
         /// <summary>
@@ -26,9 +27,11 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// (including those without a namespace) if no default namespace 
         /// has been specified for selectors. 
         /// </summary>
-        public virtual Selector<HtmlNode> Universal()
+        public virtual Selector<HtmlNode> Universal(NamespacePrefix prefix)
         {
-            return nodes => nodes.Elements();
+            return prefix.IsSpecific
+                 ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
+                 : (nodes => nodes.Elements());
         }
 
         /// <summary>
@@ -58,9 +61,11 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// that represents an element with the given attribute <paramref name="name"/>
         /// whatever the values of the attribute.
         /// </summary>
-        public virtual Selector<HtmlNode> AttributeExists(string name)
+        public virtual Selector<HtmlNode> AttributeExists(NamespacePrefix prefix, string name)
         {
-            return nodes => nodes.Elements().Where(n => n.Attributes[name] != null);
+            return prefix.IsSpecific
+                 ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
+                 : (nodes => nodes.Elements().Where(n => n.Attributes[name] != null));
         }
 
         /// <summary>
@@ -68,12 +73,14 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// that represents an element with the given attribute <paramref name="name"/>
         /// and whose value is exactly <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<HtmlNode> AttributeExact(string name, string value)
+        public virtual Selector<HtmlNode> AttributeExact(NamespacePrefix prefix, string name, string value)
         {
-            return nodes => from n in nodes.Elements()
-                            let a = n.Attributes[name]
-                            where a != null && a.Value == value
-                            select n;
+            return prefix.IsSpecific
+                 ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
+                 : (nodes => from n in nodes.Elements()
+                             let a = n.Attributes[name]
+                             where a != null && a.Value == value
+                             select n);
         }
 
         /// <summary>
@@ -82,12 +89,14 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// and whose value is a whitespace-separated list of words, one of 
         /// which is exactly <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<HtmlNode> AttributeIncludes(string name, string value)
+        public virtual Selector<HtmlNode> AttributeIncludes(NamespacePrefix prefix, string name, string value)
         {
-            return nodes => from n in nodes.Elements()
-                            let a = n.Attributes[name]
-                            where a != null && a.Value.Split(' ').Contains(value)
-                            select n;
+            return prefix.IsSpecific
+                 ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
+                 : (nodes => from n in nodes.Elements()
+                             let a = n.Attributes[name]
+                             where a != null && a.Value.Split(' ').Contains(value)
+                             select n);
         }
 
         /// <summary>
@@ -96,9 +105,9 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// its value either being exactly <paramref name="value"/> or beginning 
         /// with <paramref name="value"/> immediately followed by "-" (U+002D).
         /// </summary>
-        public virtual Selector<HtmlNode> AttributeDashMatch(string name, string value)
+        public virtual Selector<HtmlNode> AttributeDashMatch(NamespacePrefix prefix, string name, string value)
         {
-            return string.IsNullOrEmpty(value)
+            return prefix.IsSpecific || string.IsNullOrEmpty(value)
                  ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
                  : (nodes => from n in nodes.Elements()                            
                              let a = n.Attributes[name]
@@ -111,9 +120,9 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// that represents an element with the attribute <paramref name="name"/> 
         /// whose value begins with the prefix <paramref name="value"/>.
         /// </summary>
-        public Selector<HtmlNode> AttributePrefixMatch(string name, string value)
+        public Selector<HtmlNode> AttributePrefixMatch(NamespacePrefix prefix, string name, string value)
         {
-            return string.IsNullOrEmpty(value) 
+            return prefix.IsSpecific || string.IsNullOrEmpty(value) 
                  ? (Selector<HtmlNode>) (nodes => Enumerable.Empty<HtmlNode>()) 
                  : (nodes => from n in nodes.Elements()
                              let a = n.Attributes[name]
@@ -126,9 +135,9 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// that represents an element with the attribute <paramref name="name"/> 
         /// whose value ends with the suffix <paramref name="value"/>.
         /// </summary>
-        public Selector<HtmlNode> AttributeSuffixMatch(string name, string value)
+        public Selector<HtmlNode> AttributeSuffixMatch(NamespacePrefix prefix, string name, string value)
         {
-            return string.IsNullOrEmpty(value)
+            return prefix.IsSpecific || string.IsNullOrEmpty(value)
                  ? (Selector<HtmlNode>)(nodes => Enumerable.Empty<HtmlNode>())
                  : (nodes => from n in nodes.Elements()
                              let a = n.Attributes[name]
@@ -141,9 +150,9 @@ namespace Fizzler.Systems.HtmlAgilityPack
         /// that represents an element with the attribute <paramref name="name"/> 
         /// whose value contains at least one instance of the substring <paramref name="value"/>.
         /// </summary>
-        public Selector<HtmlNode> AttributeSubstring(string name, string value)
+        public Selector<HtmlNode> AttributeSubstring(NamespacePrefix prefix, string name, string value)
         {
-            return string.IsNullOrEmpty(value)
+            return prefix.IsSpecific || string.IsNullOrEmpty(value)
                  ? (Selector<HtmlNode>)(nodes => Enumerable.Empty<HtmlNode>())
                  : (nodes => from n in nodes.Elements()
                              let a = n.Attributes[name]

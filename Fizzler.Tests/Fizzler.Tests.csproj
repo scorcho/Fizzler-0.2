@@ -53,9 +53,11 @@
     <Compile Include="AttributeSelectors.cs" />
     <Compile Include="ChildAndAdjacentSelectors.cs" />
     <Compile Include="ClassSelector.cs" />
+    <Compile Include="ParserTests.cs" />
     <Compile Include="HumanReadableSelectorGeneratorTests.cs" />
     <Compile Include="IDSelector.cs" />
     <Compile Include="MultipleSelectors.cs" />
+    <Compile Include="NamespacePrefixTests.cs" />
     <Compile Include="NthChild.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ElementSelector.cs" />

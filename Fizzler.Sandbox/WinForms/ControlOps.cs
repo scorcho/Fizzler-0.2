@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -28,27 +28,28 @@ namespace Fizzler.Systems.WinForms
         /// on the other hand will yield instance of <c>Foo.Bar.Button</c>.
         /// In essence, <paramref name="type"/> represent the <em>tail</em>.
         /// </remarks>
-        public virtual Selector<Control> Type(string type)
+        public virtual Selector<Control> Type(NamespacePrefix prefix, string type)
         {
+            // TODO Proper namespace support
             return TypeEndsWith(type.Split('-').Reverse().ToArray());
         }
 
         private static Selector<Control> TypeEndsWith(string[] names)
         {
-            return controls => controls.Where(
-                c => c.GetType().FullName
-                      .Split('.')
-                      .Reverse()
-                      .Take(names.Length)
-                      .SequenceEqual(names, StringComparer.InvariantCultureIgnoreCase));
+            return controls => controls.Where(c => c.GetType().FullName
+                                       .Split('.')
+                                       .Reverse()
+                                       .Take(names.Length)
+                                       .SequenceEqual(names, StringComparer.InvariantCultureIgnoreCase));
         }
 
         /// <summary>
         /// Generates a <a href="http://www.w3.org/TR/css3-selectors/#universal-selector">universal selector</a>,
         /// any single control in the control tree. 
         /// </summary>
-        public virtual Selector<Control> Universal()
+        public virtual Selector<Control> Universal(NamespacePrefix prefix)
         {
+            // TODO Proper namespace support
             return controls => controls;
         }
 
@@ -69,7 +70,7 @@ namespace Fizzler.Systems.WinForms
         /// </summary>
         public virtual Selector<Control> Class(string clazz)
         {
-            return AttributeIncludes("class", clazz);
+            return AttributeIncludes(NamespacePrefix.None, "class", clazz);
         }
 
         /// <summary>
@@ -77,8 +78,9 @@ namespace Fizzler.Systems.WinForms
         /// that represents a control with the given property <paramref name="name"/>
         /// whatever the values of the property.
         /// </summary>
-        public virtual Selector<Control> AttributeExists(string name)
+        public virtual Selector<Control> AttributeExists(NamespacePrefix prefix, string name)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.Properties().Find(name, true) != null);
         }
 
@@ -87,8 +89,9 @@ namespace Fizzler.Systems.WinForms
         /// that represents a control with the given property <paramref name="name"/>
         /// and whose value is exactly <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<Control> AttributeExact(string name, string value)
+        public virtual Selector<Control> AttributeExact(NamespacePrefix prefix, string name, string value)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.FindPropertyValueString(name) == value);
         }
 
@@ -98,8 +101,9 @@ namespace Fizzler.Systems.WinForms
         /// and whose value is a whitespace-separated list of words, one of 
         /// which is exactly <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<Control> AttributeIncludes(string name, string value)
+        public virtual Selector<Control> AttributeIncludes(NamespacePrefix prefix, string name, string value)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.FindPropertyValueString(name).Split().Contains(value));
         }
 
@@ -109,8 +113,9 @@ namespace Fizzler.Systems.WinForms
         /// its value either being exactly <paramref name="value"/> or beginning 
         /// with <paramref name="value"/> immediately followed by "-" (U+002D).
         /// </summary>
-        public virtual Selector<Control> AttributeDashMatch(string name, string value)
+        public virtual Selector<Control> AttributeDashMatch(NamespacePrefix prefix, string name, string value)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.FindPropertyValueString(name).Split('-').Contains(value));
         }
 
@@ -119,8 +124,9 @@ namespace Fizzler.Systems.WinForms
         /// that represents an control with the attribute <paramref name="name"/> 
         /// whose value begins with the prefix <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<Control> AttributePrefixMatch(string name, string value)
+        public virtual Selector<Control> AttributePrefixMatch(NamespacePrefix prefix, string name, string value)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.FindPropertyValueString(name).StartsWith(value));
         }
 
@@ -129,8 +135,9 @@ namespace Fizzler.Systems.WinForms
         /// that represents an control with the attribute <paramref name="name"/> 
         /// whose value ends with the suffix <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<Control> AttributeSuffixMatch(string name, string value)
+        public virtual Selector<Control> AttributeSuffixMatch(NamespacePrefix prefix, string name, string value)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.FindPropertyValueString(name).EndsWith(value));
         }
 
@@ -139,8 +146,9 @@ namespace Fizzler.Systems.WinForms
         /// that represents an element with the attribute <paramref name="name"/> 
         /// whose value contains at least one instance of the substring <paramref name="value"/>.
         /// </summary>
-        public virtual Selector<Control> AttributeSubstring(string name, string value)
+        public virtual Selector<Control> AttributeSubstring(NamespacePrefix prefix, string name, string value)
         {
+            // TODO Proper namespace support
             return controls => controls.Where(c => c.FindPropertyValueString(name).Contains(value));
         }
 

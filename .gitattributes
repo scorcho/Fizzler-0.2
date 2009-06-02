@@ -39,7 +39,9 @@ Fizzler.Tests/Fizzler.Tests.csproj -text
 Fizzler.Tests/HumanReadableSelectorGeneratorTests.cs -text
 Fizzler.Tests/IDSelector.cs -text
 Fizzler.Tests/MultipleSelectors.cs -text
+Fizzler.Tests/NamespacePrefixTests.cs -text
 Fizzler.Tests/NthChild.cs -text
+Fizzler.Tests/ParserTests.cs -text
 Fizzler.Tests/Properties/AssemblyInfo.cs -text
 Fizzler.Tests/PsuedoSelectors.cs -text
 Fizzler.Tests/ReaderTests.cs -text
@@ -55,6 +57,7 @@ Fizzler/Fizzler.snk -text
 Fizzler/HumanReadableSelectorGenerator.cs -text
 Fizzler/IElementOps.cs -text
 Fizzler/ISelectorGenerator.cs -text
+Fizzler/NamespacePrefix.cs -text
 Fizzler/Parser.cs -text
 Fizzler/Properties/AssemblyInfo.cs -text
 Fizzler/Reader.cs -text
@@ -70,6 +73,7 @@ Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 Libs/SgmlReaderDll.dll -text
 Libs/nunit.framework.dll -text
+NET-2.0/Actions.cs -text
 NET-2.0/ExtensionAttribute.cs -text
 NET-2.0/Fizzler.Systems.HtmlAgilityPack.csproj -text
 NET-2.0/Fizzler.Systems.XmlNodeQuery.csproj -text

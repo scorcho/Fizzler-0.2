@@ -6,50 +6,56 @@ namespace Fizzler.Systems.XmlNodeQuery
 {
 	public class XmlNodeOps : IElementOps<XmlNode>
 	{
-		public virtual Selector<XmlNode> Type(string type)
+		public virtual Selector<XmlNode> Type(NamespacePrefix prefix, string type)
 		{
-			return nodes => nodes.Where(n => n.Name == type);
+            // TODO Proper namespace support
+            return nodes => nodes.Where(n => n.Name == type);
 		}
 
-		public virtual Selector<XmlNode> Universal()
+		public virtual Selector<XmlNode> Universal(NamespacePrefix prefix)
 		{
-			return nodes => nodes.Elements();
+            // TODO Proper namespace support
+            return nodes => nodes.Elements();
 		}
 
 		public virtual Selector<XmlNode> Id(string id)
 		{
-			return AttributeExact("id", id);
+			return AttributeExact(NamespacePrefix.None, "id", id);
 		}
 
 		public virtual Selector<XmlNode> Class(string clazz)
 		{
-			return AttributeIncludes("class", clazz);
+			return AttributeIncludes(NamespacePrefix.None, "class", clazz);
 		}
 
-		public virtual Selector<XmlNode> AttributeExists(string name)
+		public virtual Selector<XmlNode> AttributeExists(NamespacePrefix prefix, string name)
 		{
+            // TODO Proper namespace support
 			return nodes => nodes.Elements().Where(n => n.Attributes[name] != null);
 		}
 
-		public virtual Selector<XmlNode> AttributeExact(string name, string value)
+		public virtual Selector<XmlNode> AttributeExact(NamespacePrefix prefix, string name, string value)
 		{
-			return nodes => from n in nodes.Elements()
+            // TODO Proper namespace support
+            return nodes => from n in nodes.Elements()
 			                let a = n.Attributes[name]
 			                where a != null && a.Value == value
 			                select n;
 		}
 
-		public virtual Selector<XmlNode> AttributeIncludes(string name, string value)
+		public virtual Selector<XmlNode> AttributeIncludes(NamespacePrefix prefix, string name, string value)
 		{
-			return nodes => from n in nodes.Elements()
+            // TODO Proper namespace support
+            return nodes => from n in nodes.Elements()
 			                let a = n.Attributes[name]
 			                where a != null && a.Value.Split(' ').Contains(value)
 			                select n;
 		}
 
-		public virtual Selector<XmlNode> AttributeDashMatch(string name, string value)
+		public virtual Selector<XmlNode> AttributeDashMatch(NamespacePrefix prefix, string name, string value)
 		{
-			return string.IsNullOrEmpty(value)
+            // TODO Proper namespace support
+            return string.IsNullOrEmpty(value)
 			     ? (Selector<XmlNode>)(nodes => Enumerable.Empty<XmlNode>())
 			     : (nodes => from n in nodes.Elements()
 			                 let a = n.Attributes[name]
@@ -57,9 +63,10 @@ namespace Fizzler.Systems.XmlNodeQuery
 			       		            select n);
 		}
 
-		public virtual Selector<XmlNode> AttributePrefixMatch(string name, string value)
+		public virtual Selector<XmlNode> AttributePrefixMatch(NamespacePrefix prefix, string name, string value)
 		{
-			return string.IsNullOrEmpty(value)
+            // TODO Proper namespace support
+            return string.IsNullOrEmpty(value)
 			     ? (Selector<XmlNode>)(nodes => Enumerable.Empty<XmlNode>())
 			     : (nodes => from n in nodes.Elements()
 			                 let a = n.Attributes[name]
@@ -67,9 +74,10 @@ namespace Fizzler.Systems.XmlNodeQuery
 			                 select n);
 		}
 
-		public virtual Selector<XmlNode> AttributeSuffixMatch(string name, string value)
+		public virtual Selector<XmlNode> AttributeSuffixMatch(NamespacePrefix prefix, string name, string value)
 		{
-			return string.IsNullOrEmpty(value)
+            // TODO Proper namespace support
+            return string.IsNullOrEmpty(value)
 			     ? (Selector<XmlNode>)(nodes => Enumerable.Empty<XmlNode>())
 			     : (nodes => from n in nodes.Elements()
 			                 let a = n.Attributes[name]
@@ -77,9 +85,10 @@ namespace Fizzler.Systems.XmlNodeQuery
 			                 select n);
 		}
 
-		public virtual Selector<XmlNode> AttributeSubstring(string name, string value)
+		public virtual Selector<XmlNode> AttributeSubstring(NamespacePrefix prefix, string name, string value)
 		{
-			return string.IsNullOrEmpty(value)
+            // TODO Proper namespace support
+            return string.IsNullOrEmpty(value)
 			     ? (Selector<XmlNode>)(nodes => Enumerable.Empty<XmlNode>())
 			     : (nodes => from n in nodes.Elements()
 			                 let a = n.Attributes[name]
