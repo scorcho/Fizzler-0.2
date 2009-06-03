@@ -52,6 +52,7 @@ Fizzler.Tests/TokenTests.cs -text
 Fizzler.Tests/TokenerTests.cs -text
 Fizzler.Tests/XmlNodeQueryTests.cs -text
 /Fizzler.sln -text
+Fizzler/Either.cs -text
 Fizzler/Fizzler.csproj -text
 Fizzler/Fizzler.snk -text
 Fizzler/HumanReadableSelectorGenerator.cs -text
