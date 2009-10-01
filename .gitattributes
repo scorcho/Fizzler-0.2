@@ -24,6 +24,7 @@ Fizzler.Sandbox/Xml/XmlNodeExtensions.cs -text
 Fizzler.Sandbox/Xml/XmlNodeOps.cs -text
 Fizzler.Sandbox/Xml/XmlNodeSelection.cs -text
 Fizzler.Systems.HtmlAgilityPack/Fizzler.Systems.HtmlAgilityPack.csproj -text
+Fizzler.Systems.HtmlAgilityPack/HtmlDocumentExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeExtensions.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeOps.cs -text
 Fizzler.Systems.HtmlAgilityPack/HtmlNodeSelection.cs -text
