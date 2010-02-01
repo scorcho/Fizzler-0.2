@@ -72,6 +72,9 @@ Libs/HtmlAgilityPack.dll -text
 Libs/HtmlAgilityPack.pdb -text
 Libs/LinqBridge.dll -text
 Libs/LinqBridge.pdb -text
+Libs/Mannex.dll -text
+Libs/Mannex.pdb -text
+Libs/Mannex.xml -text
 Libs/SgmlReaderDll.dll -text
 Libs/nunit.framework.dll -text
 NET-2.0/Actions.cs -text
